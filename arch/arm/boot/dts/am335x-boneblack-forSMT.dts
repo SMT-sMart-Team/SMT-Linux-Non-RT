@@ -37,6 +37,16 @@
 };
 
 &am33xx_pinmux {
+    /* AB ZhaoYJ for enable CAN @2016-05-13 */
+	dcan1_pins: pinmux_dcan1_pins {
+		pinctrl-single,pins = <
+			/* P9_26: uart1_rxd.d_can1_tx */
+			BONE_P9_26 (PIN_OUTPUT_PULLUP | MUX_MODE2)
+			/* P9_24: uart1_txd.d_can1_rx */
+			BONE_P9_24 (PIN_INPUT_PULLUP | MUX_MODE2)
+		>;
+	};
+
 	pru_pins: pinmux_pru_pins {
 		pinctrl-single,pins = <
 			//0x03c 0x35	/* ecap0_in_pwm0_out.pr1_ecap0_ecap_capin, MODE5 | INPUT_PULLUP | PRU, PPM-sum, SBUS, DSM  */
@@ -122,7 +132,6 @@
 	};
 };
 
-
 &i2c2 {
 	clock-frequency = <400000>;
 };
@@ -176,5 +185,12 @@
 &uart5 {
 	pinctrl-names = "default";
 	pinctrl-0 = <&uart5_pins>;
+	status = "okay";
+};
+
+/* AB ZhaoYJ for enable CAN @2016-05-13 */
+&dcan1 {
+	pinctrl-names = "default";
+	pinctrl-0 = <&dcan1_pins>;
 	status = "okay";
 };
