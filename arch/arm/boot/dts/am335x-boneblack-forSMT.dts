@@ -132,9 +132,6 @@
 	};
 };
 
-&i2c2 {
-	clock-frequency = <400000>;
-};
 
 &spi0 {
         pinctrl-names = "default";
