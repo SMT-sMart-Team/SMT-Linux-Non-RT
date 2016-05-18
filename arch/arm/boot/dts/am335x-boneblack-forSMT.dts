@@ -49,7 +49,7 @@
 
 	pru_pins: pinmux_pru_pins {
 		pinctrl-single,pins = <
-			//0x03c 0x35	/* ecap0_in_pwm0_out.pr1_ecap0_ecap_capin, MODE5 | INPUT_PULLUP | PRU, PPM-sum, SBUS, DSM  */
+			/*0x03c 0x35*/	/* ecap0_in_pwm0_out.pr1_ecap0_ecap_capin, MODE5 | INPUT_PULLUP | PRU, PPM-sum, SBUS, DSM  */
 			0x03c 0x2E	/* gpmc_ad13.pr1_pru0_pru_r30_15, MODE6 | INPUT | PRU, PPM-sum, SBUS, DSM */
 
 			0x0e8 0x25	/* lcd_pclk.pr1_pru1_pru_r30_10, MODE5 | OUTPUT | PRU, CH_1 */
